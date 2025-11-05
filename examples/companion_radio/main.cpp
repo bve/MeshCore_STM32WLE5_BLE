@@ -79,8 +79,13 @@ static uint32_t _atoi(const char* sp) {
     ArduinoSerialInterface serial_interface;
   #endif
 #elif defined(STM32_PLATFORM)
-  #include <helpers/ArduinoSerialInterface.h>
-  ArduinoSerialInterface serial_interface;
+  #ifdef BLE_UART_BRIDGE
+    #include <helpers/nrf52_uart_bridge/SerialBLEInterface.h>
+    SerialBLEInterface serial_interface;
+  #else 
+    #include <helpers/ArduinoSerialInterface.h>
+    ArduinoSerialInterface serial_interface;
+  #endif
 #else
   #error "need to define a serial interface"
 #endif

@@ -17,8 +17,6 @@ class TinyRelayBoard : public STM32Board
     void begin() override
     {
         STM32Board::begin();
-        pinMode(PA0, OUTPUT);
-        pinMode(PA1, OUTPUT);
     }
 
     const char *getManufacturerName() const override { return "Tiny Relay"; }
@@ -33,18 +31,6 @@ class TinyRelayBoard : public STM32Board
         return ((double)raw) * ADC_MULTIPLIER / 8 / 4096;
     }
 
-    void setGpio(uint32_t values) override
-    {
-        // set led values
-        digitalWrite(PA0, values & 1);
-        digitalWrite(PA1, (values & 2) >> 1);
-    }
-
-    uint32_t getGpio() override
-    {
-        // get led value
-        return (digitalRead(PA1) << 1) | digitalRead(PA0);
-    }
 };
 
 extern TinyRelayBoard board;
