@@ -1,3 +1,11 @@
+# Modified firmware for "tiny_relay" with external BLE module over UART
+
+This firmware is a modified build that enables the tiny_relay variant to work with an external BLE module using a UART protocol.
+
+For the nRF52840 BLE module implementation, see: https://github.com/bve/nrf52840
+
+![nRF52840 ProMicro](meshcore_tiny_relay_ble.jpg.jpg)
+
 ## About MeshCore
 
 MeshCore is a lightweight, portable C++ library that enables multi-hop packet routing for embedded projects using LoRa and other packet radios. It is designed for developers who want to create resilient, decentralized communication networks that work without the internet.
@@ -121,4 +129,3 @@ Before building/flashing the RAK4631 targets in this project, there is, unfortun
 
 After building, you will need to convert the output firmware.hex file into a .uf2 file you can copy over to your RAK4631 device (after doing a full erase) by using the command `uf2conv.py -f 0xADA52840 -c firmware.hex` with the python script available from:
    [GitHub: Microsoft - uf2](https://github.com/Microsoft/uf2/blob/master/utils/uf2conv.py)
-
