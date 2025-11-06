@@ -1,6 +1,6 @@
 # Modified firmware for "tiny_relay" with external BLE module over UART
 
-This firmware is a modified build that enables the tiny_relay variant to work with an external BLE module using a UART protocol.
+This firmware is a modified build that enables the tiny_relay variant to work with an external BLE module using an UART protocol.
 
 For the nRF52840 BLE module implementation, see: https://github.com/bve/nrf52840
 
