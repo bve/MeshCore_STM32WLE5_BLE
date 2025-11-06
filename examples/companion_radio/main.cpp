@@ -111,6 +111,8 @@ void halt() {
 }
 
 void setup() {
+  delay(3000);
+
   Serial.begin(115200);
 
   board.begin();
