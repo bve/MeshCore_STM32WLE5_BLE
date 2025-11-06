@@ -4,7 +4,7 @@ This firmware is a modified build that enables the tiny_relay variant to work wi
 
 For the nRF52840 BLE module implementation, see: https://github.com/bve/nrf52840
 
-![nRF52840 ProMicro](meshcore_tiny_relay_ble.jpg.jpg)
+![nRF52840 ProMicro](meshcore_tiny_relay_ble.jpg)
 
 ## About MeshCore
 
