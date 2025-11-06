@@ -2,7 +2,7 @@
 
 This firmware is a modified build that enables the tiny_relay variant to work with an external BLE module using an UART protocol.
 
-For the nRF52840 BLE module implementation, see: https://github.com/bve/nrf52840
+For the nRF52840 BLE module implementation, see: https://github.com/bve/MeshCore_nrf52840_BLE_UART
 
 ![nRF52840 ProMicro](meshcore_tiny_relay_ble.jpg)
 
